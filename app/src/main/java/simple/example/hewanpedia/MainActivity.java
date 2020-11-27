@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton btnKucing,btnAnjing,btnAyam;
+    ImageButton btnToshiba,btnHp,btnAcer;
     public static final String JENIS_GALERI_KEY = "JENIS_GALERI";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +20,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inisialisasiView() {
-        btnKucing = findViewById(R.id.btn_buka_ras_kucing);
-        btnAnjing = findViewById(R.id.btn_buka_ras_anjing);
-        btnAyam = findViewById(R.id.btn_buka_ras_ayam);
-        btnKucing.setOnClickListener(view -> bukaGaleri("Kucing"));
-        btnAnjing.setOnClickListener(view -> bukaGaleri("Anjing"));
-        btnAyam.setOnClickListener(view -> bukaGaleri("Ayam"));
+        btnToshiba = findViewById(R.id.btn_buka_toshiba);
+        btnHp = findViewById(R.id.btn_buka_hp);
+        btnAcer = findViewById(R.id.btn_buka_acer);
+        btnToshiba.setOnClickListener(view -> bukaGaleri("Toshiba"));
+        btnHp.setOnClickListener(view -> bukaGaleri("Hp"));
+        btnAcer.setOnClickListener(view -> bukaGaleri("Acer"));
     }
 
-    private void bukaGaleri(String jenisHewan) {
-        Log.d("MAIN","Buka activity kucing");
+    private void bukaGaleri(String jenisLeptop) {
+        Log.d("MAIN","Buka activity toshiba");
         Intent intent = new Intent(this, GaleriActivity.class);
-        intent.putExtra(JENIS_GALERI_KEY, jenisHewan);
+        intent.putExtra(JENIS_GALERI_KEY, jenisLeptop);
         startActivity(intent);
     }
 

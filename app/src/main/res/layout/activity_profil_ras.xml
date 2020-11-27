@@ -15,7 +15,7 @@
         android:id="@+id/txJudul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ras Anjing"
+        android:text="Jenis Leptop"
         android:textColor="@color/green_500"
         android:textSize="19sp"
         android:layout_marginBottom="24dp"
@@ -25,7 +25,7 @@
         android:id="@+id/gambarHewan"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:src="@drawable/dog_kintamani"
+        android:src="@drawable/hp_2"
         android:scaleType="fitCenter"
         android:layout_marginBottom="16dp"
         />
@@ -36,30 +36,22 @@
         android:layout_gravity="center"
         android:textAlignment="center">
         <TextView
-            android:id="@+id/txJenis"
+            android:id="@+id/txModel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Hewan"
+            android:text="Model Leptop"
             android:layout_marginRight="10px"
-            android:textColor="@color/green_500"
-            android:textSize="17sp"
-            />
-        <TextView
-            android:id="@+id/txRas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ras"
             android:textColor="@color/green_500"
             android:textSize="17sp"
             />
     </LinearLayout>
     <TextView
-        android:id="@+id/txAsal"
+        android:id="@+id/txPabrikan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:textColor="@color/black"
-        android:text="Asal" />
+        android:text="Pabrikan" />
     <TextView
         android:id="@+id/txDeskripsi"
         android:layout_marginTop="8dp"
@@ -67,7 +59,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="@color/black"
-        android:text="Deskripsi hewan" />
+        android:text="Deskripsi Leptop" />
 
     <LinearLayout
         android:layout_marginTop="24dp"

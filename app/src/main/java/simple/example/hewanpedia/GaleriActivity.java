@@ -12,23 +12,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
-import simple.example.hewanpedia.model.Hewan;
+import simple.example.hewanpedia.model.Leptop;
 
 public class GaleriActivity extends AppCompatActivity {
 
-    List<Hewan> hewans;
+    List<Leptop> laptop;
     int indeksTampil = 0;
-    String jenisHewan;
+    String jenisLaptop;
     Button btnPertama,btnTerakhir,btnSebelumnya,btnBerikutnya;
-    TextView txJenis,txRas,txAsal,txDeskripsi,txJudul;
-    ImageView ivFotoHewan;
+    TextView txModel,txPabrikan,txDeskripsi,txJudul;
+    ImageView ivFotoLaptop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_ras);
         Intent intent = getIntent();
-        jenisHewan = intent.getStringExtra(MainActivity.JENIS_GALERI_KEY);
-        hewans = DataProvider.getHewansByTipe(this,jenisHewan);
+        jenisLaptop = intent.getStringExtra(MainActivity.JENIS_GALERI_KEY);
+        laptop = DataProvider.getLaptopssByTipe(this,jenisLaptop);
         inisialisasiView();
         tampilkanProfil();
     }
@@ -44,25 +44,23 @@ public class GaleriActivity extends AppCompatActivity {
         btnSebelumnya.setOnClickListener(view -> hewanSebelumnya());
         btnBerikutnya.setOnClickListener(view -> hewanBerikutnya());
 
-        txJenis = findViewById(R.id.txJenis);
-        txRas = findViewById(R.id.txRas);
-        txAsal = findViewById(R.id.txAsal);
+        txModel = findViewById(R.id.txModel);
+        txPabrikan = findViewById(R.id.txPabrikan);
         txDeskripsi = findViewById(R.id.txDeskripsi);
-        ivFotoHewan = findViewById(R.id.gambarHewan);
+        ivFotoLaptop = findViewById(R.id.gambarHewan);
 
         txJudul = findViewById(R.id.txJudul);
-        txJudul.setText("Berbagai Macam Ras "+jenisHewan);
+        txJudul.setText("Berbagai Macam Laptop "+jenisLaptop);
     }
 
 
     private void tampilkanProfil() {
-        Hewan k = hewans.get(indeksTampil);
-        Log.d("ANJING","Menampilkan anjing "+k.getJenis());
-        txJenis.setText(k.getJenis());
-        txRas.setText(k.getRas());
-        txAsal.setText(k.getAsal());
+        Leptop k = laptop.get(indeksTampil);
+        Log.d("TOSHIBA","Menampilkan toshiba "+k.getModel());
+        txModel.setText(k.getModel());
+        txPabrikan.setText(k.getPabrikan());
         txDeskripsi.setText(k.getDeskripsi());
-        ivFotoHewan.setImageDrawable(this.getDrawable(k.getDrawableRes()));
+        ivFotoLaptop.setImageDrawable(this.getDrawable(k.getDrawableRes()));
     }
 
     private void hewanPertama() {
@@ -77,7 +75,7 @@ public class GaleriActivity extends AppCompatActivity {
     }
 
     private void hewanTerakhir() {
-        int posAkhir = hewans.size() - 1;
+        int posAkhir = laptop.size() - 1;
         if (indeksTampil == posAkhir) {
             Toast.makeText(this,"Sudah di posisi terakhir",Toast.LENGTH_SHORT).show();
             return;
@@ -88,7 +86,7 @@ public class GaleriActivity extends AppCompatActivity {
     }
 
     private void hewanBerikutnya() {
-        if (indeksTampil == hewans.size() - 1) {
+        if (indeksTampil == laptop.size() - 1) {
             Toast.makeText(this,"Sudah di posisi terakhir",Toast.LENGTH_SHORT).show();
             return;
         } else {

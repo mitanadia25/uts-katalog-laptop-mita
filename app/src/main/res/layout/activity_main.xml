@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Kucing, Anjing &amp; Ayam Pedia"
+        android:text="Katalog Leptop "
         android:textStyle="bold"
         android:textColor="@color/green_500"
         android:textSize="29sp"
@@ -28,38 +28,38 @@
         android:orientation="horizontal"
         >
         <ImageButton
-            android:id="@+id/btn_buka_ras_kucing"
+            android:id="@+id/btn_buka_toshiba"
             android:padding="5dp"
             android:layout_margin="1dp"
             android:layout_width="100px"
             android:layout_weight="1"
             android:layout_height="150dp"
             android:background="@color/white"
-            android:src="@drawable/cat_angora"
+            android:src="@drawable/toshiba_1"
             android:scaleType="fitCenter"
             />
 
         <ImageButton
-            android:id="@+id/btn_buka_ras_ayam"
+            android:id="@+id/btn_buka_hp"
             android:padding="5dp"
             android:layout_margin="1dp"
             android:layout_width="100px"
             android:layout_weight="1"
             android:layout_height="150dp"
             android:background="@color/white"
-            android:src="@drawable/ayam_bali"
+            android:src="@drawable/hp_1"
             android:scaleType="fitCenter"
             />
 
         <ImageButton
-            android:id="@+id/btn_buka_ras_anjing"
+            android:id="@+id/btn_buka_acer"
             android:padding="5dp"
             android:layout_margin="1dp"
             android:layout_width="100px"
             android:layout_weight="1"
             android:layout_height="150dp"
             android:background="@color/white"
-            android:src="@drawable/dog_kintamani"
+            android:src="@drawable/acer_1"
             android:scaleType="fitCenter"
             />
     </LinearLayout>
